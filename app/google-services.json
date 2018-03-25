@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "563925040686",
+    "firebase_url": "https://parquebd.firebaseio.com",
+    "project_id": "parquebd",
+    "storage_bucket": "parquebd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563925040686:android:79347e491f42a681",
+        "android_client_info": {
+          "package_name": "com.example.daale.pruebafirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563925040686-cii653f2o2q9ag503ut95c2tns37dgla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5VNkZJGEmZMU9kojFCHRxOdtdYnmJYhA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563925040686:android:c13c641fff73cdc1",
+        "android_client_info": {
+          "package_name": "com.example.daale.tachosservapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563925040686-cii653f2o2q9ag503ut95c2tns37dgla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5VNkZJGEmZMU9kojFCHRxOdtdYnmJYhA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
