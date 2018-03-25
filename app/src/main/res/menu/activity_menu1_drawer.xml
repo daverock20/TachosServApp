@@ -5,33 +5,33 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/itlugares"
+            android:icon="@drawable/buscarlugares"
+            android:title="Lugares" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/itpagos"
+            android:icon="@drawable/pagos"
+            android:title="Pagos" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/itclientes"
+            android:icon="@drawable/histclientes"
+            android:title="Mis Clientes" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/itcontacto"
+            android:icon="@drawable/contactardes"
+            android:title="Contacto" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Usuario">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/itcerrar"
+                android:icon="@drawable/cerrar"
+                android:title="Cerrar Sesión" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/itsalir"
+                android:icon="@drawable/salir"
+                android:title="Salir" />
         </menu>
     </item>
 

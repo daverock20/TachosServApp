@@ -13,9 +13,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class menu1 extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class menu1 extends AppCompatActivity
+
+        implements NavigationView.OnNavigationItemSelectedListener {
+    FirebaseAuth mAuth;            //Creas el objeto para el servicio autentication de firebase
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,17 +83,19 @@ public class menu1 extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.itlugares) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.itpagos) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.itclientes) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.itcontacto) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.itcerrar) {
+            mAuth.signOut();
+            finish();
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.itsalir) {
 
         }
 
