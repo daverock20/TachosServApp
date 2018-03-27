@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
         pbProgreso = (ProgressBar) findViewById(R.id.pbProgress);
         pbProgreso.setVisibility(View.INVISIBLE);
-
         mAuth = FirebaseAuth.getInstance();
         //se inicializa el listener este es un escuchador de estado
         //implementa un metodo que se va a ejecutar cada vez que sucedan cambios, como cuando se logea y cuando cierra la sesion
@@ -48,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
                 if(user == null){
                     //no esta logeado
                     btnCerrado.setVisibility(View.INVISIBLE);
-                    Toast.makeText(getApplicationContext(), "Correcto y No logueado", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "No esta logueado", Toast.LENGTH_LONG).show();
                 }else{
                     //esta logeado
                     btnCerrado.setVisibility(View.VISIBLE);
-                    Toast.makeText(getApplicationContext(), "Correcto y Logueado", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Esta Logueado", Toast.LENGTH_LONG).show();
                 }
             }
         };
@@ -61,18 +60,18 @@ public class MainActivity extends AppCompatActivity {
         btnIniciado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Ingresando", Toast.LENGTH_LONG).show();
+
+                Toast.makeText(getApplicationContext(),"Ingresando", Toast.LENGTH_SHORT).show();
                 // Iniciando sesión llamando a Ingresar();
                 Ingresar();
-                Intent ir_actMenuUsuarios = new Intent(MainActivity.this, menu1.class); //Me manda al Activity_menu_usuarios
-                startActivity(ir_actMenuUsuarios); //Inicio el Intent
+
 
             }
         });
         btnCerrado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Cerrando Sesión", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Cerrando Sesión", Toast.LENGTH_SHORT).show();
                 //Cerrando sesión
                 mAuth.signOut();
 
@@ -97,12 +96,16 @@ public class MainActivity extends AppCompatActivity {
                     //que va a verificar si la tarea se completo o no (es donde se verifican las credenciales )
                     if(task.isSuccessful()){
                         //Toast.makeText(getApplicationContext(), "Correcto", Toast.LENGTH_LONG).show();
+                        Intent ir_actMenuUsuarios = new Intent(MainActivity.this, menu1.class); //Me manda al Activity_menu_usuarios
+                        startActivity(ir_actMenuUsuarios); //Inicio el Intent
                     }else {
                         Toast.makeText(getApplicationContext(), "Incorrecto", Toast.LENGTH_LONG).show();
                     }
                     pbProgreso.setVisibility(View.INVISIBLE);
                 }
             });
+        }else{
+            Toast.makeText(getApplicationContext(), "Campos vacios :/", Toast.LENGTH_LONG).show();
         }
     }
 
