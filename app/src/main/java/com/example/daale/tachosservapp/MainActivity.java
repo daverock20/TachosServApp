@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar pbProgreso;        //Creas el obejto de la progress bar
     FirebaseAuth mAuth;            //Creas el objeto para el servicio autentication de firebase
     FirebaseAuth.AuthStateListener listener;
-
+    Intent ir_actMenuUsuarios;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
                     //esta logeado
                     btnCerrado.setVisibility(View.VISIBLE);
                     Toast.makeText(getApplicationContext(), "Esta Logueado", Toast.LENGTH_LONG).show();
+                    ir_actMenuUsuarios = new Intent(MainActivity.this, menu1.class); //Me manda al Activity_menu_usuarios
+                    startActivity(ir_actMenuUsuarios); //Inicio el Intent
+
                 }
             }
         };
@@ -96,8 +99,9 @@ public class MainActivity extends AppCompatActivity {
                     //que va a verificar si la tarea se completo o no (es donde se verifican las credenciales )
                     if(task.isSuccessful()){
                         //Toast.makeText(getApplicationContext(), "Correcto", Toast.LENGTH_LONG).show();
-                        Intent ir_actMenuUsuarios = new Intent(MainActivity.this, menu1.class); //Me manda al Activity_menu_usuarios
+                        ir_actMenuUsuarios = new Intent(MainActivity.this, menu1.class); //Me manda al Activity_menu_usuarios
                         startActivity(ir_actMenuUsuarios); //Inicio el Intent
+
                     }else {
                         Toast.makeText(getApplicationContext(), "Incorrecto", Toast.LENGTH_LONG).show();
                     }
